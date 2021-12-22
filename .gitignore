@@ -1,0 +1,4 @@
+# Ignore everything
+bundled
+dist
+node_modules
