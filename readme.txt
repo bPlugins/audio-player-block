@@ -1,4 +1,4 @@
-=== B Timeline Block - Gutenberg Block Directory Block ===
+=== MP3 Player - Gutenberg Block ===
 Contributors: abuhayat, charlescormier
 Donate link: https://gum.co/wpdonate/
 Tags: block, key1, key2, key3, Gutenberg block
@@ -101,12 +101,6 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
-
-= 1.0.0 =
-* Initial Release
-
-
-== Upgrade Notice ==
 
 = 1.0.0 =
 * Initial Release
