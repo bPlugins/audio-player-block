@@ -7,17 +7,7 @@ addEventListener("DOMContentLoaded", function () {
     let mp3playerEl = document.getElementById(bmpbSelector.id);
 
     const { audioProperties } = JSON.parse(mp3playerEl.dataset.mp3player);
-    // let audios = [];
-    // audioProperties.map((item, index) => {
-    //   audios.push({
-    //     title: item.title,
-    //     coverPath: item.cover.url,
-    //     artist: item.artist,
-    //     discPath: item.audio.url,
-    //   });
-    // });
 
     MP3Player("#" + bmpbSelector.id, audioProperties);
   });
 });
-

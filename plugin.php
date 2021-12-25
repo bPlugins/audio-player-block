@@ -34,10 +34,6 @@ class BPMPBlockDirectory{
     }
 
     function enqueueBlockAssets(){ 
-        // wp_enqueue_script( 'bpmp-player-script', BPMP_PLUGIN_DIR . 'assets/js/script.js', [], BPMP_VERSION, true ); 
-        // wp_enqueue_style( 'bpmp-player-css', BPMP_PLUGIN_DIR . 'assets/css/style.css', [], BPMP_VERSION); 
-        // wp_enqueue_style( 'bpmp-fontawesome-css', 'https://use.fontawesome.com/releases/v5.15.1/css/all.css', [], BPMP_VERSION); 
-        wp_enqueue_style( 'bpmp-fontAwesome', BPMP_PLUGIN_DIR . 'assets/css/fontAwesome.min.css', [], BPMP_VERSION); 
         wp_enqueue_style( 'bpmp-googlfont', 'fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;400;500;600;700;800;900&display=swap', [], BPMP_VERSION);
     }
 

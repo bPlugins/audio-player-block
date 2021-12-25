@@ -18,13 +18,10 @@ import Title from "../../Components/Title";
 import icons from "./Const/icons";
 import options from "./Const/options";
 
-const { fontWeights, pxUnit, perUnit, emUnit, remUnit, generalStyleTabs } =
-  options;
+const { pxUnit, perUnit } = options;
 
 const Settings = ({ attributes, setAttributes }) => {
   const { audioProperties, alignment, width } = attributes;
-
-  console.log(attributes);
 
   const addNewAudioProperty = () => {
     setAttributes({

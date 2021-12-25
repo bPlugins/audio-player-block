@@ -1,5 +1,5 @@
 === MP3 Player - Gutenberg Block ===
-Contributors: abuhayat, charlescormier
+Contributors: abuhayat, srabonr
 Donate link: https://gum.co/wpdonate/
 Tags: block, key1, key2, key3, Gutenberg block
 Requires at least: 5.0+
