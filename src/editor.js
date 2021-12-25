@@ -42,6 +42,11 @@ registerBlockType(name, {
     }, [clientId]); // Set & Update clientId to cId
 
     useEffect(() => {
+      "" === audioProperties[0]?.cover.url &&
+        setAttributes({ url: "image-source" });
+    }, []); // Set & Default image to first Load
+
+    useEffect(() => {
       0 !== audioProperties?.length &&
         MP3Player("#block-" + clientId, audioProperties);
     }, [audioProperties]);
@@ -58,6 +63,7 @@ registerBlockType(name, {
               <div id="cover-box">
                 <img src="" alt="cover-image" id="cover" />
               </div>
+
               <div id="music-box">
                 <audio id="disc"></audio>
                 <div id="music-info">

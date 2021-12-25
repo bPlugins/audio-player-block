@@ -1,3 +1,5 @@
+import CoverImage from "../images/cover1.jpg";
+
 const MP3Player = (selector, songs = []) => {
   const element =
     typeof selector == "string" ? document.querySelector(selector) : selector;
@@ -17,36 +19,11 @@ const MP3Player = (selector, songs = []) => {
   const next = element.querySelector("#next");
   let songIndex = 0;
 
-  // Songs info
-  // const songs = [
-  //   {
-  //     title: 'Green Chair',
-  //     artist: 'Diego Nava',
-  //     coverPath: 'assets/images/cover1.jpg',
-  //     discPath: 'https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3',
-  //     duration: '1:33',
-  //   },
-  //   {
-  //     title: 'Dance with Me',
-  //     artist: 'Ahjay Stelino',
-  //     coverPath: 'assets/images/cover2.jpg',
-  //     discPath: 'assets/music/music2.mp3',
-  //     duration: '2:22',
-  //   },
-  //   {
-  //     title: 'Gimme that Bottle',
-  //     artist: 'Michael Ramir',
-  //     coverPath: 'assets/images/cover3.jpg',
-  //     discPath: 'assets/music/music3.mp3',
-  //     duration: '1:54',
-  //   },
-  // ];
-
   // Load song initially
 
   // Load the given song
   const loadSong = (song) => {
-    cover.src = song.cover?.url;
+    cover.src = song.cover?.url || CoverImage;
     disc.src = song.audio?.url;
     title.textContent = song.title;
     artist.textContent = song.artist;
