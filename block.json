@@ -28,7 +28,7 @@
     },
     "width": {
       "type": "string",
-      "default": "25%"
+      "default": "290px"
     },
     "alignment": {
       "type": "string",
