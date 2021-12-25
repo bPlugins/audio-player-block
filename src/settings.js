@@ -104,13 +104,13 @@ const Settings = ({ attributes, setAttributes }) => {
                         !audio?.url ? (
                           <div className="btnControl">
                             <Button icon="upload" onClick={open}>
-                              {__("Upload", "bplugins")}
+                              {__("Upload", "mp3player-block")}
                             </Button>
                           </div>
                         ) : (
                           <div className="btnControl">
                             <Button icon="controls-repeat" onClick={open}>
-                              {__("Replace", "bplugins")}
+                              {__("Replace", "mp3player-block")}
                             </Button>
                             <Button
                               icon="exit"
@@ -125,7 +125,7 @@ const Settings = ({ attributes, setAttributes }) => {
                               }}
                               className="btnRed"
                             >
-                              {__("Remove", "bplugins")}
+                              {__("Remove", "mp3player-block")}
                             </Button>
                           </div>
                         )
@@ -145,13 +145,13 @@ const Settings = ({ attributes, setAttributes }) => {
                         !cover?.url ? (
                           <div className="btnControl">
                             <Button icon="upload" onClick={open}>
-                              {__("Upload", "bplugins")}
+                              {__("Upload", "mp3player-block")}
                             </Button>
                           </div>
                         ) : (
                           <div className="btnControl">
                             <Button icon="controls-repeat" onClick={open}>
-                              {__("Replace", "bplugins")}
+                              {__("Replace", "mp3player-block")}
                             </Button>
                             <Button
                               icon="exit"
@@ -165,7 +165,7 @@ const Settings = ({ attributes, setAttributes }) => {
                               }
                               className="btnRed"
                             >
-                              {__("Remove", "bplugins")}
+                              {__("Remove", "mp3player-block")}
                             </Button>
                           </div>
                         )
