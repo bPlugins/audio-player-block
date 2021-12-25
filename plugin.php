@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name: Audio Player  - Gutenberg Block
- * Description: Listen Music on Web.
+ * Plugin Name: Audio Player  Block
+ * Description: Listen Music on the Web.
  * Version: 1.0.0
  * Author: bPlugins LLC
  * Author URI: http://bplugins.com
@@ -9,6 +9,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: mp3player-block
  */
+
 
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) { exit; }
@@ -128,4 +129,5 @@ class BPMPBlockDirectory{
         <?php  return ob_get_clean();
     } // Render
 }
-BPMPBlockDirectory::instance();
+// BPMPBlockDirectory::instance();
+new BPMPBlockDirectory();
