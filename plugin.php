@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: MP3 Player - Gutenberg Block
+ * Plugin Name: Audio Player  - Gutenberg Block
  * Description: Listen Music on Web.
  * Version: 1.0.0
  * Author: bPlugins LLC

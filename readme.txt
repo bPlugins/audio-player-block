@@ -1,4 +1,4 @@
-=== MP3 Player - Gutenberg Block ===
+=== Audio Player - Gutenberg Block ===
 Contributors: abuhayat, srabonr
 Donate link: https://gum.co/wpdonate/
 Tags: block, key1, key2, key3, Gutenberg block

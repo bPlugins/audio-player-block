@@ -10,7 +10,7 @@
     "preview": "npm-run-all --parallel sync start",
     "build": "npm run lint && webpack --mode=production && gulp bundle"
   },
-  "author": "Srabon Rahman",
+  "author": "bPlugins",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.0",

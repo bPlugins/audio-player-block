@@ -1,10 +1,10 @@
 {
   "apiVersion": "1",
   "name": "bpmp/mp3-player",
-  "title": "MP3 Player Block",
+  "title": "Audio Player",
   "description": "Listen music on the web.",
   "category": "widgets",
-  "keywords": ["music player", "mp3 player", "music player block"],
+  "keywords": ["music player", "audio player", "mp3 player block"],
   "textdomain": "mp3player-block",
   "attributes": {
     "align": {
