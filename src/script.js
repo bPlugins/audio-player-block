@@ -1,13 +1,15 @@
-import "./style.scss";
-import MP3Player from "../assets/js/script";
+import './style.scss';
+import MP3Player from './MP3Player';
 
-addEventListener("DOMContentLoaded", function () {
-  let bmpbSelectors = document.querySelectorAll(".wp-block-bpmp-mp3-player");
-  Object.values(bmpbSelectors).map((bmpbSelector) => {
-    let mp3playerEl = document.getElementById(bmpbSelector.id);
+// Audio Player
+document.addEventListener('DOMContentLoaded', () => {
+	const allAudioPlayer = document.querySelectorAll('.wp-block-bpmp-mp3-player');
+	allAudioPlayer.forEach(audioPlayer => {
+		const attributes = JSON.parse(audioPlayer.dataset.attributes);
+		const { audioProperties } = attributes;
 
-    const { audioProperties } = JSON.parse(mp3playerEl.dataset.mp3player);
+		MP3Player(audioPlayer, audioProperties);
 
-    MP3Player("#" + bmpbSelector.id, audioProperties);
-  });
+		audioPlayer?.removeAttribute('data-attributes');
+	});
 });

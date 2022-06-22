@@ -1,22 +1,22 @@
-=== Audio Player  Block ===
-Contributors: abuhayat, srabonr
+=== Audio Player Block ===
+Contributors: abuhayat, charlescormier, srabonr
 Donate link: https://gum.co/wpdonate/
-Tags: block, key1, key2, key3, Gutenberg block
+Tags: block, audio player block, mp3 player, Gutenberg block
 Requires at least: 5.0+
-Tested up to: 5.8.2
-Stable tag: 1.0.0
+Tested up to: 6.0
+Stable tag: 1.0.2
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Short Description
+A block for embedding beautiful audio player. 
 
 == Description ==
 
-Large Description
+A block for embedding beautiful audio player on WordPress website. It support multiple audios as a playlist and you can select a single audio file to make a non playlist player. 
 
 
-**[Demos](https://bblockswp.com/demo/block-directory/)**
+**[Demos](https://bblockswp.com/demo/audio-player/)**
 
 
 = Features =
@@ -24,8 +24,8 @@ Large Description
 
 
 = How to use =
-- First install the Block Directory plugin
-- Add the Block Directory block from the block category called "Widgets" in Gutenberg editor.
+- First install the Audio Player Block plugin
+- Add the Audio Player Block from the block category called "Widgets" in Gutenberg editor.
 - You can change block settings from the right side settings sidebar.
 - Enjoy!
 
@@ -58,25 +58,25 @@ Large Description
 
 = From Gutenberg Editor: =
 1. Go to the WordPress Block/Gutenberg Editor
-2. Search For **Block Directory**
-3. Click on the **Block Directory** to add the block
+2. Search For **Audio Player**
+3. Click on the **Audio Player** to add the block
 
 = Download & Upload: =
-1. Download the **Block Directory** plugin (*.zip file*)
+1. Download the **Audio Player Block** plugin (*.zip file*)
 2. In your admin area, go to the Plugins menu and click on **Add New**
-3. Click on **Upload Plugin** and choose the **`block-directory.zip`** file and click on **Install Now**
+3. Click on **Upload Plugin** and choose the **`audio-player-block.zip`** file and click on **Install Now**
 4. Activate the plugin and Enjoy!
 
 = Manually: =
-1. Download and upload the **Block Directory** plugin to the **`/wp-content/plugins/`** directory
+1. Download and upload the **Audio Player Block** plugin to the **`/wp-content/plugins/`** directory
 2. Activate the plugin through the Plugins menu in WordPress
 
 
 == Frequently Asked Questions ==
 
-= Is Block Directory free? =
+= Is Audio Player Block free? =
 
-Yes, Block Directory is a free Gutenberg block plugin.
+Yes, Audio Player Block is a free Gutenberg block plugin.
 
 = Does it work with any WordPress theme? =
 
@@ -92,15 +92,38 @@ You can use unlimited times as you want.
 
 = Where can I get support? =
 
-You can post your questions on the [support forum here](https://wordpress.org/support/plugin/block-directory/)
+You can post your questions on the [support forum here](https://wordpress.org/support/plugin/audio-player-block/)
 
 
 == Screenshots ==
 
-1. All Block Directory
+1. Audio Player
+2. Player Settings
 
 
 == Changelog ==
+
+= 1.0.2 =
+* Add translate feature
+* Insert file from url
+
+= 1.0.1 =
+* readme updated
+* fix mirror issues
+
+= 1.0.0 =
+* Initial Release
+
+
+== Upgrade Notice ==
+
+= 1.0.2 =
+* Add translate feature
+* Insert file from url
+
+= 1.0.1 =
+* readme updated
+* fix mirror issues
 
 = 1.0.0 =
 * Initial Release
