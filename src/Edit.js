@@ -1,15 +1,19 @@
 import { useEffect } from '@wordpress/element';
 import { __ } from '@wordpress/i18n';
 
+import { tabController } from '../../Components/Helper/functions';
+
 import MP3Player from './MP3Player';
 import Settings from './Settings';
 import Style from './Style';
 
 const Edit = props => {
-	const { className, attributes, setAttributes, clientId } = props;
+	const { className, attributes, setAttributes, clientId, isSelected } = props;
 	const { audioProperties } = attributes;
 
 	useEffect(() => { clientId && setAttributes({ cId: clientId.substring(0, 10) }); }, [clientId]); // Set & Update clientId to cId
+
+	useEffect(() => tabController(), [isSelected]);
 
 	useEffect(() => {
 		0 !== audioProperties?.length && MP3Player(`#bpmp3player-${clientId}`, audioProperties);

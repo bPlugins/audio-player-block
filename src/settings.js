@@ -56,10 +56,10 @@ const Settings = ({ attributes, setAttributes }) => {
 						</PanelRow>
 
 						<Title>{__('Audio File:', 'mp3player-block')}</Title>
-						<InlineDetailMediaUpload value={audio} type='audio' onChange={val => updateAudioProperty(index, 'audio', val)} placeholder={__('Enter Audio URL', 'mp3player-block')} />
+						<InlineDetailMediaUpload value={audio} types={['audio']} onChange={val => updateAudioProperty(index, 'audio', val)} placeholder={__('Enter Audio URL', 'mp3player-block')} />
 
 						<Title>{__('Cover Photo:', 'mp3player-block')}</Title>
-						<InlineDetailMediaUpload value={cover} type='image' onChange={val => updateAudioProperty(index, 'cover', val)} placeholder={__('Enter Cover Image URL', 'mp3player-block')} />
+						<InlineDetailMediaUpload value={cover} types={['image']} onChange={val => updateAudioProperty(index, 'cover', val)} placeholder={__('Enter Cover Image URL', 'mp3player-block')} />
 
 						<PanelRow className='itemAction mt20'>
 							<Button className='removeItem' label={__('Remove', 'mp3player-block')} onClick={e => {

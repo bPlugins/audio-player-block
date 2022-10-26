@@ -15,51 +15,18 @@
 if ( !defined( 'ABSPATH' ) ) { exit; }
 
 // Constant
+define( 'BPMP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : ' 1.0.2' );
 define( 'BPMP_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
-define( 'BPMP_PLUGIN_VERSION', 'localhost' === $_SERVER['HTTP_HOST'] ? time() : ' 1.0.2' );
 
 // Block Directory
 class BPMPBlockDirectory{
 	function __construct(){
-		add_action( 'enqueue_block_assets', [$this, 'enqueueBlockAssets'] );
 		add_action( 'init', [$this, 'register'] );
-	}
-
-	function has_reusable_block( $block_name ){
-		if( get_the_ID() ){
-			if ( has_block( 'block', get_the_ID() ) ){
-				// Check reusable blocks
-				$content = get_post_field( 'post_content', get_the_ID() );
-				$blocks = parse_blocks( $content );
-	
-				if ( !is_array( $blocks ) || empty( $blocks ) ) {
-					return false;
-				}
-	
-				foreach ( $blocks as $block ) {
-					if ( $block['blockName'] === 'core/block' && ! empty( $block['attrs']['ref'] ) ) {
-						if( has_block( $block_name, $block['attrs']['ref'] ) ){
-						 	return true;
-						}
-					}
-				}
-			}
-		}
-		return false;
-	}
-
-	function enqueueBlockAssets(){ 
-		if ( is_admin() || $this->has_reusable_block( 'bpmp/mp3-player' ) || has_block( 'bpmp/mp3-player', get_the_ID() ) ) {
-			wp_register_style( 'bpmp-mp3-player-style', plugins_url( 'dist/style.css', __FILE__ ), [ 'wp-editor' ], BPMP_PLUGIN_VERSION ); // Frontend Style
-		}
-
-		if( !is_admin() && !$this->has_reusable_block( 'bpmp/mp3-player' ) || has_block( 'bpmp/mp3-player', get_the_ID() ) ){
-			wp_dequeue_script('bpmp-mp3-player-script');
-		}
 	}
 
 	function register() {
 		wp_register_style( 'bpmp-mp3-player-editor-style', plugins_url( 'dist/editor.css', __FILE__ ), [ 'wp-edit-blocks' ], BPMP_PLUGIN_VERSION ); // Backend Style
+		wp_register_style( 'bpmp-mp3-player-style', plugins_url( 'dist/style.css', __FILE__ ), [], BPMP_PLUGIN_VERSION ); // Frontend Style
 
 		register_block_type( __DIR__, [
 			'editor_style'		=> 'bpmp-mp3-player-editor-style',
