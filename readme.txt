@@ -3,7 +3,7 @@ Contributors: abuhayat, charlescormier, srabonr
 Donate link: https://gum.co/wpdonate/
 Tags: block, audio player block, mp3 player, Gutenberg block
 Requires at least: 5.3+
-Tested up to: 6.0
+Tested up to: 6.1.1
 Stable tag: 1.0.2
 Requires PHP: 7.1
 License: GPLv3 or later

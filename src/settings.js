@@ -46,12 +46,12 @@ const Settings = ({ attributes, setAttributes }) => {
 
 					return <PanelBody key={index} className='bPlPanelBody editItem' title={__(`Audio No ${index + 1}:`, 'mp3player-block')} initialOpen={0 !== index ? false : true}>
 						<PanelRow>
-							<Title mt='0' mb='0'>{__('Title:', 'mp3player-block')}</Title>
+							<Title className=''>{__('Title:', 'mp3player-block')}</Title>
 							<TextControl value={title} onChange={val => updateAudioProperty(index, 'title', val)} />
 						</PanelRow>
 
 						<PanelRow>
-							<Title mt='0' mb='0'>{__('Artist:', 'mp3player-block')}</Title>
+							<Title className=''>{__('Artist:', 'mp3player-block')}</Title>
 							<TextControl value={artist} onChange={val => updateAudioProperty(index, 'artist', val)} />
 						</PanelRow>
 
