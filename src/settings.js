@@ -5,24 +5,20 @@ import { PanelBody, PanelRow, TextControl, __experimentalUnitControl as UnitCont
 // Components
 import Title from '../../Components/Title';
 import { InlineDetailMediaUpload } from '../../Components/MediaControl';
-import icons from './Const/icons';
-import options from './Const/options';
-const { pxUnit, perUnit } = options;
+import { gearIcon } from '../../Components/Helper/icons';
+import { pxUnit, perUnit } from '../../Components/Helper/options';
 
 const Settings = ({ attributes, setAttributes }) => {
 	const { audioProperties, alignment, width } = attributes;
 
 	const addNewAudioProperty = () => {
 		setAttributes({
-			audioProperties: [
-				...audioProperties,
-				{
-					title: 'Green Chair',
-					artist: 'Diego Nava',
-					cover: { id: null, url: '', alt: '', title: '' },
-					audio: { id: null, url: '', title: '' },
-				},
-			],
+			audioProperties: [...audioProperties, {
+				title: 'Green Chair',
+				artist: 'Diego Nava',
+				cover: { id: null, url: '', alt: '', title: '' },
+				audio: { id: null, url: '', title: '' }
+			}]
 		});
 	};
 
@@ -37,6 +33,16 @@ const Settings = ({ attributes, setAttributes }) => {
 			setAttributes({ audioProperties: newAudioProperties });
 		}
 	};
+
+	const duplicateAudioProperty = (e, index) => {
+		e.preventDefault();
+		setAttributes({ audioProperties: [...audioProperties.slice(0, index), { ...audioProperties[index] }, ...audioProperties.slice(index)] });
+	}
+
+	const removeAudioProperty = (e, index) => {
+		e.preventDefault();
+		setAttributes({ audioProperties: [...audioProperties.slice(0, index), ...audioProperties.slice(index + 1)] });
+	}
 
 	return <>
 		<InspectorControls>
@@ -62,15 +68,9 @@ const Settings = ({ attributes, setAttributes }) => {
 						<InlineDetailMediaUpload value={cover} types={['image']} onChange={val => updateAudioProperty(index, 'cover', val)} placeholder={__('Enter Cover Image URL', 'mp3player-block')} />
 
 						<PanelRow className='itemAction mt20'>
-							<Button className='removeItem' label={__('Remove', 'mp3player-block')} onClick={e => {
-								e.preventDefault();
-								setAttributes({ audioProperties: [...audioProperties.slice(0, index), ...audioProperties.slice(index + 1)] });
-							}}><Dashicon icon='no' />{__('Remove', 'mp3player-block')}</Button>
+							{1 < audioProperties.length && <Button className='removeItem' label={__('Remove', 'mp3player-block')} onClick={e => removeAudioProperty(e, index)}><Dashicon icon='no' />{__('Remove', 'mp3player-block')}</Button>}
 
-							<Button className='duplicateItem' label={__('Duplicate', 'mp3player-block')} onClick={e => {
-								e.preventDefault();
-								setAttributes({ audioProperties: [...audioProperties, { ...audioProperties[index] }] });
-							}}>{icons.gearSettings}{__('Duplicate', 'mp3player-block')}</Button>
+							<Button className='duplicateItem' label={__('Duplicate', 'mp3player-block')} onClick={e => duplicateAudioProperty(e, index)}>{gearIcon}{__('Duplicate', 'mp3player-block')}</Button>
 						</PanelRow>
 					</PanelBody>;
 				})}
@@ -83,7 +83,7 @@ const Settings = ({ attributes, setAttributes }) => {
 			</PanelBody>
 
 			<PanelBody className='bPlPanelBody' title={__('Player Settings', 'mp3player-block')}>
-				<UnitControl label={__('Width:', 'mp3player-block')} labelPosition='left' value={width} onChange={(val) => setAttributes({ width: val })} units={[pxUnit, perUnit]} />
+				<UnitControl label={__('Width:', 'mp3player-block')} labelPosition='left' value={width} onChange={(val) => setAttributes({ width: val })} units={[pxUnit(), perUnit()]} />
 			</PanelBody>
 		</InspectorControls>
 

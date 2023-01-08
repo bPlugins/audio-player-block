@@ -1,4 +1,4 @@
-import DefaultCoverImg from './img/cover.jpg';
+const defaultCoverImg = 'https://bblockswp.com/wp-content/demo/img/cassette-tape-square.jpg';
 
 const MP3Player = (selector, songs = []) => {
 	const element = typeof selector == 'string' ? document.querySelector(selector) : selector;
@@ -7,7 +7,7 @@ const MP3Player = (selector, songs = []) => {
 	const disc = element.querySelector('#disc');
 	const title = element.querySelector('#title');
 	const artist = element.querySelector('#artist');
-	const progressContainer = element.querySelector('#progress-container');
+	const progressContainer = element.querySelector('#progressContainer');
 	const progress = element.querySelector('#progress');
 	const timer = element.querySelector('#timer');
 	const duration = element.querySelector('#duration');
@@ -20,7 +20,7 @@ const MP3Player = (selector, songs = []) => {
 
 	// Load the given song
 	const loadSong = (song) => {
-		cover.src = song.cover?.url || DefaultCoverImg;
+		cover.src = song.cover?.url || defaultCoverImg;
 		disc.src = song.audio?.url;
 		title.textContent = song.title;
 		artist.textContent = song.artist;
@@ -29,7 +29,6 @@ const MP3Player = (selector, songs = []) => {
 			duration.innerHTML = toHHMMSS(disc.duration);
 		});
 	};
-
 	loadSong(songs[songIndex]);
 
 	// Toggle play and pause
@@ -41,6 +40,7 @@ const MP3Player = (selector, songs = []) => {
 		}
 	}
 
+	// Convert time
 	function toHHMMSS(time) {
 		var sec_num = parseInt(time, 10); // don't forget the second param
 		var hours = Math.floor(sec_num / 3600);
@@ -56,7 +56,8 @@ const MP3Player = (selector, songs = []) => {
 		if (seconds < 10) {
 			seconds = '0' + seconds;
 		}
-		return minutes + ':' + seconds;
+
+		return `${parseInt(hours) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`;
 	}
 
 	// Update icon
@@ -74,12 +75,21 @@ const MP3Player = (selector, songs = []) => {
 	function updateProgress() {
 		progress.style.width = (disc.currentTime / disc.duration) * 100 + '%';
 
-		let minutes = Math.floor(disc.currentTime / 60);
-		let seconds = Math.floor(disc.currentTime % 60);
+		var hours = Math.floor(disc.currentTime / 3600);
+		var minutes = Math.floor((disc.currentTime - hours * 3600) / 60);
+		var seconds = Math.floor(disc.currentTime - hours * 3600 - minutes * 60);
+		// let minutes = Math.floor(disc.currentTime / 60);
+		// let seconds = Math.floor(disc.currentTime % 60);
+		if (hours < 10) {
+			hours = '0' + hours;
+		}
+		if (minutes < 10) {
+			minutes = '0' + minutes;
+		}
 		if (seconds < 10) {
 			seconds = '0' + seconds;
 		}
-		timer.textContent = `${minutes}:${seconds}`;
+		timer.textContent = `${parseInt(hours) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`;
 	}
 
 	// Reset the progress

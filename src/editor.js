@@ -3,10 +3,10 @@ import { registerBlockType } from '@wordpress/blocks';
 import metadata from '../block.json';
 import Edit from './Edit';
 import './editor.scss';
-import icons from './Const/icons';
+import { mp3playerIcon } from './utils/icons';
 
 registerBlockType(metadata, {
-	icon: icons.mp3player,
+	icon: mp3playerIcon,
 
 	// Build in Functions
 	edit: Edit,
