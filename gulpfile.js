@@ -22,6 +22,7 @@ exports.bundle = () => (
 		"!package.json",
 		"!package-lock.json",
 		"!readme.md",
+		"!todo.txt",
 		"!webpack.config.js",
 	])
 		.pipe(zip('audio-player-block.zip'))

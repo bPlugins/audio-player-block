@@ -12,6 +12,7 @@ $primaryColor: #4527a4;
 	}
 
 	.bpMp3Player {
+		max-width: 100%;
 		background-color: #fff;
 		border-radius: 1rem;
 		box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
@@ -127,13 +128,13 @@ $primaryColor: #4527a4;
 				background-color: #000;
 				fill: #fff;
 				margin: 0 1rem;
-				padding: 1.4rem 1rem;
 				cursor: pointer;
 				border: none;
 				outline: none;
 				transition: opacity 200ms linear;
 				width: 60px;
 				height: 60px;
+				overflow: hidden;
 				border-radius: 50%;
 				display: inline-flex;
 				align-items: center;
@@ -144,11 +145,11 @@ $primaryColor: #4527a4;
 				}
 
 				svg {
-					width: 30px;
+					padding: 16.5px 15px;
 				}
 
 				svg.playBtn {
-					margin-left: 5px;
+					padding: 15.75px 15px 15.75px 20px;
 
 					.pausePath {
 						display: none;
@@ -156,7 +157,7 @@ $primaryColor: #4527a4;
 				}
 
 				svg.pauseBtn {
-					margin: 0 2.5px;
+					padding: 14px 16px;
 
 					.playPath {
 						display: none;
