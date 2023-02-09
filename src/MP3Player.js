@@ -34,6 +34,9 @@ const MP3Player = (selector, songs = []) => {
 	// Toggle play and pause
 	function playPauseMedia() {
 		if (disc.paused) {
+			const allAudioEls = document.querySelectorAll('audio');
+			allAudioEls.forEach(audioEl => audioEl?.pause());
+
 			disc.play();
 		} else {
 			disc.pause();

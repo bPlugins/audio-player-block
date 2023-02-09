@@ -4,7 +4,7 @@ Donate link: https://gum.co/wpdonate/
 Tags: block, audio player block, mp3 player, Gutenberg block
 Requires at least: 5.3+
 Tested up to: 6.1.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -21,6 +21,7 @@ A block for embedding beautiful audio player on WordPress website. It support mu
 
 = Features =
 - **Fully Customizable**: All the options you need to arrange the showcase to your liking are available here.
+- **Audio Pause**: Pause other audio when play.
 
 
 = How to use =
@@ -43,15 +44,15 @@ A block for embedding beautiful audio player on WordPress website. It support mu
 
 = ⭐ Check out our other WordPress Plugins- =
 
-🔥 **[Html5 Audio Player](https://audioplayerwp.com/)** – Best audio player plugin for WordPress.
+🔥 **[Html5 Audio Player](https://bplugins.com/products/html5-audio-player)** – Best audio player plugin for WordPress.
 
-🔥 **[Html5 Video Player](https://wpvideoplayer.com/)** – Best video player plugin for WordPress.
+🔥 **[Html5 Video Player](https://bplugins.com/products/html5-video-player)** – Best video player plugin for WordPress.
 
-🔥 **[PDF Poster](http://pdfposter.com/)** – A fully-featured PDF Viewer Plugin for WordPress.
+🔥 **[PDF Poster](https://bplugins.com/products/pdf-poster)** – A fully-featured PDF Viewer Plugin for WordPress.
 
-🔥 **[StreamCast](https://wordpress.org/plugins/streamcast)** – A fully-featured Radio Player Plugin for WordPress.
+🔥 **[StreamCast](https://bplugins.com/products/streamcast-radio-player)** – A fully-featured Radio Player Plugin for WordPress.
 
-🔥 **[3D Viewer](https://3d-viewer.bplugins.com/)** – Display interactive 3D models on the webs.
+🔥 **[3D Viewer](https://bplugins.com/products/3d-viewer)** – Display interactive 3D models on the webs.
 
 
 == Installation ==
@@ -103,6 +104,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.0.5 =
+* Pause other audio when play.
+* Not load scripts if block is not used
+
 = 1.0.4 =
 * Fix responsive issue
 * Fix play/pause button accuracy
@@ -123,6 +128,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+* Pause other audio when play.
+* Not load scripts if block is not used
 
 = 1.0.4 =
 * Fix responsive issue

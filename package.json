@@ -6,8 +6,9 @@
 	"scripts": {
 		"lint": "eslint src",
 		"start": "webpack --mode=development --watch",
-		"sync": "browser-sync start -p 'http://localhost' --files '**/*.php' 'dist/*.js' 'dist/*.css'",
-		"preview": "npm-run-all --parallel sync start",
+		"sync": "browser-sync start -p 'http://localhost/' --files '**/*.php' 'dist/*.js' 'dist/*.css'",
+		"watch": "gulp browser-sync",
+		"preview": "npm-run-all --parallel watch start",
 		"i18n-pot": "wp i18n make-pot . languages/mp3player-block.pot --exclude=\"src\" && cp ./languages/mp3player-block.pot ./languages/mp3player-block-en_US.po",
 		"i18n-json": "wp i18n make-json languages/ --no-purge",
 		"i18n-mo": "wp i18n make-mo languages/",
