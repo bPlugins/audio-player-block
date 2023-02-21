@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Audio Player Block
  * Description: Listen Music on the Web.
- * Version: 1.0.5
+ * Version: 1.0.6
  * Author: bPlugins LLC
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -15,54 +15,20 @@
 if ( !defined( 'ABSPATH' ) ) { exit; }
 
 // Constant
-define( 'BPMP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : ' 1.0.5' );
+define( 'BPMP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : ' 1.0.6' );
 define( 'BPMP_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
 
 // Block Directory
 class BPMp3Player{
 	function __construct(){
-		add_action( 'enqueue_block_assets', [$this, 'enqueueBlockAssets'] );
-		add_action( 'wp_enqueue_scripts', [$this, 'wpEnqueueScripts'] );
 		add_action( 'init', [$this, 'onInit'] );
 	}
-
-	function has_reusable_block( $block_name ){
-		if( get_the_ID() ){
-			if ( has_block( 'block', get_the_ID() ) ){
-				// Check reusable blocks
-				$content = get_post_field( 'post_content', get_the_ID() );
-				$blocks = parse_blocks( $content );
 	
-				if ( !is_array( $blocks ) || empty( $blocks ) ) {
-					return false;
-				}
-	
-				foreach ( $blocks as $block ) {
-					if ( $block['blockName'] === 'core/block' && ! empty( $block['attrs']['ref'] ) ) {
-						if( has_block( $block_name, $block['attrs']['ref'] ) ){
-						 	return true;
-						}
-					}
-				}
-			}
-		}
-		return false;
-	}
-
-	function enqueueBlockAssets(){
-		wp_register_style( 'bpmp-mp3-player-style', plugins_url( 'dist/style.css', __FILE__ ), [], BPMP_PLUGIN_VERSION ); // Style
-	}
-
-	function wpEnqueueScripts(){
+	function onInit() {
 		wp_register_script( 'bpmp-mp3-player-script', plugins_url( 'dist/script.js', __FILE__ ), [], BPMP_PLUGIN_VERSION, true ); // Frontend Script
 
-		if( $this->has_reusable_block( 'bpmp/mp3-player' ) || has_block( 'bpmp/mp3-player', get_the_ID() ) ){
-			wp_enqueue_script( 'bpmp-mp3-player-script' );
-			wp_enqueue_style( 'bpmp-mp3-player-style' );
-		}
-	}
+		wp_register_style( 'bpmp-mp3-player-style', plugins_url( 'dist/style.css', __FILE__ ), [], BPMP_PLUGIN_VERSION ); // Style
 
-	function onInit() {
 		wp_register_style( 'bpmp-mp3-player-editor-style', plugins_url( 'dist/editor.css', __FILE__ ), [ 'bpmp-mp3-player-style' ], BPMP_PLUGIN_VERSION ); // Backend Style
 
 		register_block_type( __DIR__, [
@@ -75,6 +41,10 @@ class BPMp3Player{
 
 	function render( $attributes ){
 		extract( $attributes );
+
+		// Enqueue assets where has block
+		wp_enqueue_script( 'bpmp-mp3-player-script' );
+		wp_enqueue_style( 'bpmp-mp3-player-style' );
 
 		$className = $className ?? '';
 		$blockClassName = 'wp-block-bpmp-mp3-player ' . $className . ' align' . $align;

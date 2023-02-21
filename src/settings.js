@@ -1,6 +1,7 @@
 import { __ } from '@wordpress/i18n';
 import { InspectorControls, BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
 import { PanelBody, PanelRow, TextControl, __experimentalUnitControl as UnitControl, Button, Dashicon } from '@wordpress/components';
+import produce from 'immer';
 
 // Components
 import Title from '../../Components/Title';
@@ -22,16 +23,11 @@ const Settings = ({ attributes, setAttributes }) => {
 		});
 	};
 
-	const updateAudioProperty = (index, type, val, otherType = false) => {
-		const newAudioProperties = [...audioProperties];
-
-		if (otherType) {
-			newAudioProperties[index][type][otherType] = val;
-			setAttributes({ audioProperties: newAudioProperties });
-		} else {
-			newAudioProperties[index][type] = val;
-			setAttributes({ audioProperties: newAudioProperties });
-		}
+	const updateAudioProperty = (index, type, val) => {
+		const newAudioProperties = produce(audioProperties, draft => {
+			draft[index][type] = val;
+		});
+		setAttributes({ audioProperties: newAudioProperties });
 	};
 
 	const duplicateAudioProperty = (e, index) => {

@@ -34,8 +34,7 @@ module.exports = (env, argv) => {
 			new CleanWebpackPlugin({
 				cleanOnceBeforeBuildPatterns: [
 					'**/*',
-					'!editor.asset.php',
-					'!script.asset.php',
+					'!editor.asset.php'
 				]
 			}), // Re generate 'dist' folder
 			new MiniCssExtractPlugin({

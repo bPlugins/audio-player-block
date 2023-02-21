@@ -1,4 +1,4 @@
-const defaultCoverImg = 'https://bblockswp.com/wp-content/demo/img/cassette-tape-square.jpg';
+const defaultCoverImg = 'https://i.ibb.co/1qDChXj/cassette-tape-square.jpg';
 
 const MP3Player = (selector, songs = []) => {
 	const element = typeof selector == 'string' ? document.querySelector(selector) : selector;

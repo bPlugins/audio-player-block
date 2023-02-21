@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Audio Player Block 1.0.5\n"
+"Project-Id-Version: Audio Player Block 1.0.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/audio-player-block\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-02-09T06:36:52+00:00\n"
+"POT-Creation-Date: 2023-02-21T04:19:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: mp3player-block\n"
@@ -31,83 +31,83 @@ msgid "http://bplugins.com"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:406
+#: dist/editor.js:405
 msgid "Add or Remove Audios"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:412
+#: dist/editor.js:411
 msgid "Title:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:417
+#: dist/editor.js:416
 msgid "Artist:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:421
+#: dist/editor.js:420
 msgid "Audio File:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:422
+#: dist/editor.js:421
 msgid "Enter Audio URL"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:424
+#: dist/editor.js:423
 msgid "Cover Photo:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:425
+#: dist/editor.js:424
 msgid "Enter Cover Image URL"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:428
+#: dist/editor.js:427
 msgid "Remove"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:430
+#: dist/editor.js:429
 msgid "Duplicate"
 msgstr ""
 
 #: dist/editor.js:1
+#: dist/editor.js:435
 #: dist/editor.js:436
-#: dist/editor.js:437
 msgid "Add New Audio"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:442
+#: dist/editor.js:441
 msgid "Player Settings"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:443
+#: dist/editor.js:442
 msgid "Width:"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:449
+#: dist/editor.js:448
 msgid "Player in left"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:450
+#: dist/editor.js:449
 msgid "Player in center"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:451
+#: dist/editor.js:450
 msgid "Player in right"
 msgstr ""
 
 #: dist/editor.js:1
-#: dist/editor.js:549
+#: dist/editor.js:548
 msgid "Please add audio file first!"
 msgstr ""
 
