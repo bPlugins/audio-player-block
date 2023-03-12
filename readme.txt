@@ -4,7 +4,7 @@ Donate link: https://gum.co/wpdonate/
 Tags: block, audio player block, mp3 player, Gutenberg block
 Requires at least: 5.3+
 Tested up to: 6.1.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -104,6 +104,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.0.7 =
+* Fix play pause icon not visible on iphone
+
 = 1.0.6 =
 * Change audio property update way.
 
@@ -131,6 +134,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 1.0.7 =
+* Fix play pause icon not visible on iphone
 
 = 1.0.6 =
 * Change audio property update way.

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Audio Player Block
  * Description: Listen Music on the Web.
- * Version: 1.0.6
+ * Version: 1.0.7
  * Author: bPlugins LLC
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -15,7 +15,7 @@
 if ( !defined( 'ABSPATH' ) ) { exit; }
 
 // Constant
-define( 'BPMP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : ' 1.0.6' );
+define( 'BPMP_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : ' 1.0.7' );
 define( 'BPMP_PLUGIN_DIR', plugin_dir_url( __FILE__ ) );
 
 // Block Directory
