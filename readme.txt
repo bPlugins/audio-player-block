@@ -1,6 +1,6 @@
 === Audio Player Block ===
-Contributors: abuhayat, charlescormier, srabonr
-Donate link: https://gum.co/wpdonate/
+Contributors: abuhayat, charlescormier
+Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, audio player block, mp3 player, Gutenberg block
 Requires at least: 5.3+
 Tested up to: 6.1.1
