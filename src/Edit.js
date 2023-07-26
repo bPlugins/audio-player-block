@@ -1,4 +1,4 @@
-import { useEffect } from '@wordpress/element';
+import { useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
 
 import MP3Player from './MP3Player';

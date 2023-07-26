@@ -4,10 +4,9 @@ import { PanelBody, PanelRow, TextControl, __experimentalUnitControl as UnitCont
 import produce from 'immer';
 
 // Components
-import Title from '../../Components/Title';
-import { InlineDetailMediaUpload } from '../../Components/MediaControl';
-import { gearIcon } from '../../Components/Helper/icons';
-import { pxUnit, perUnit } from '../../Components/Helper/options';
+import { Label, InlineDetailMediaUpload, HelpPanel } from '../../Components';
+import { gearIcon } from '../../Components/utils/icons';
+import { pxUnit, perUnit } from '../../Components/utils/options';
 
 const Settings = ({ attributes, setAttributes }) => {
 	const { audioProperties, alignment, width } = attributes;
@@ -42,25 +41,32 @@ const Settings = ({ attributes, setAttributes }) => {
 
 	return <>
 		<InspectorControls>
+			<div className='bpmpInspectorInfo'>
+				Need more block like this? Checkout the bundle ➡ <a href='https://wordpress.org/plugins/b-blocks' target='_blank' rel='noopener noreferrer'>B Blocks</a>
+			</div>
+
+			<HelpPanel slug='audio-player-block' />
+
+
 			<PanelBody className='bPlPanelBody addRemoveItems' title={__('Add or Remove Audios', 'mp3player-block')}>
 				{audioProperties.map((item, index) => {
 					const { title, artist, cover, audio } = item;
 
 					return <PanelBody key={index} className='bPlPanelBody editItem' title={__(`Audio No ${index + 1}:`, 'mp3player-block')} initialOpen={0 !== index ? false : true}>
 						<PanelRow>
-							<Title className=''>{__('Title:', 'mp3player-block')}</Title>
+							<Label className=''>{__('Title:', 'mp3player-block')}</Label>
 							<TextControl value={title} onChange={val => updateAudioProperty(index, 'title', val)} />
 						</PanelRow>
 
 						<PanelRow>
-							<Title className=''>{__('Artist:', 'mp3player-block')}</Title>
+							<Label className=''>{__('Artist:', 'mp3player-block')}</Label>
 							<TextControl value={artist} onChange={val => updateAudioProperty(index, 'artist', val)} />
 						</PanelRow>
 
-						<Title>{__('Audio File:', 'mp3player-block')}</Title>
+						<Label>{__('Audio File:', 'mp3player-block')}</Label>
 						<InlineDetailMediaUpload value={audio} types={['audio']} onChange={val => updateAudioProperty(index, 'audio', val)} placeholder={__('Enter Audio URL', 'mp3player-block')} />
 
-						<Title>{__('Cover Photo:', 'mp3player-block')}</Title>
+						<Label>{__('Cover Photo:', 'mp3player-block')}</Label>
 						<InlineDetailMediaUpload value={cover} types={['image']} onChange={val => updateAudioProperty(index, 'cover', val)} placeholder={__('Enter Cover Image URL', 'mp3player-block')} />
 
 						<PanelRow className='itemAction mt20'>

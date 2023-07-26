@@ -1,6 +1,6 @@
 import { registerBlockType } from '@wordpress/blocks';
 
-import metadata from '../block.json';
+import metadata from '../inc/block.json';
 import Edit from './Edit';
 import './editor.scss';
 import { mp3playerIcon } from './utils/icons';

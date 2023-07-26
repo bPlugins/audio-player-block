@@ -1,5 +1,14 @@
 $primaryColor: #4527a4;
 
+.bpmpInspectorInfo {
+	padding: 6px;
+
+	a {
+		text-decoration: none;
+		font-weight: bold;
+	}
+}
+
 .bpMp3PlayerError {
 	color: red !important;
 	text-align: center;

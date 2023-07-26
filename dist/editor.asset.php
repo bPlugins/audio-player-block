@@ -1,5 +1,5 @@
 <?php
 return [
 	'dependencies' => [ 'wp-element', 'wp-data', 'wp-blocks', 'wp-block-editor', 'wp-i18n', 'wp-components' ],
-	'version' => BPMP_PLUGIN_VERSION
+	'version' => BPMP_VERSION
 ];

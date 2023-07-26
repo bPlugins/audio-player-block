@@ -3,31 +3,30 @@ Contributors: abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, audio player block, mp3 player, Gutenberg block
 Requires at least: 5.3+
-Tested up to: 6.1.1
-Stable tag: 1.0.7
+Tested up to: 6.2.2
+Stable tag: 1.0.8
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-A block for embedding beautiful audio player. 
+A block for embedding a beautiful audio player. 
 
 == Description ==
 
-A block for embedding beautiful audio player on WordPress website. It support multiple audios as a playlist and you can select a single audio file to make a non playlist player. 
+A block for embedding a beautiful audio player on the WordPress website. It supports multiple audios as a playlist and you can select a single audio file to make a non playlist player. 
 
 
 **[Demos](https://bblockswp.com/demo/audio-player/)**
 
 
 = Features =
-- **Fully Customizable**: All the options you need to arrange the showcase to your liking are available here.
-- **Audio Pause**: Pause other audio when play.
+- **Audio Pause**: Pause other audio when playing.
 
 
 = How to use =
-- First install the Audio Player Block plugin
-- Add the Audio Player Block from the block category called "Widgets" in Gutenberg editor.
-- You can change block settings from the right side settings sidebar.
+- First, install the Audio Player Block plugin
+- Add the Audio Player Block from the block category called "Widgets" in the Gutenberg editor.
+- You can change block settings from the right-side settings sidebar.
 - Enjoy!
 
 * For installation help click on Installation Tab
@@ -104,14 +103,17 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.0.8 =
+* Performance Improvements
+
 = 1.0.7 =
-* Fix play pause icon not visible on iphone
+* Fix the play pause icon not visible on iPhone
 
 = 1.0.6 =
 * Change audio property update way.
 
 = 1.0.5 =
-* Pause other audio when play.
+* Pause other audio when playing.
 * Not load scripts if block is not used
 
 = 1.0.4 =
@@ -123,7 +125,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = 1.0.2 =
 * Add translate feature
-* Insert file from url
+* Insert file from URL
 
 = 1.0.1 =
 * readme updated
@@ -135,14 +137,17 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Upgrade Notice ==
 
+= 1.0.8 =
+* Performance Improvements
+
 = 1.0.7 =
-* Fix play pause icon not visible on iphone
+* Fix the play pause icon not visible on iPhone
 
 = 1.0.6 =
 * Change audio property update way.
 
 = 1.0.5 =
-* Pause other audio when play.
+* Pause other audio when playing.
 * Not load scripts if block is not used
 
 = 1.0.4 =
@@ -154,7 +159,7 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = 1.0.2 =
 * Add translate feature
-* Insert file from url
+* Insert file from URL
 
 = 1.0.1 =
 * readme updated
