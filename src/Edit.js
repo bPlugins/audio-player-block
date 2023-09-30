@@ -48,9 +48,11 @@ const Edit = props => {
 						<span className='prevBtn'>
 							{prevIcon}
 						</span>
+
 						<span className='playPauseBtn'>
 							{playIcon}
 						</span>
+
 						<span className='nextBtn'>
 							{nextIcon}
 						</span>

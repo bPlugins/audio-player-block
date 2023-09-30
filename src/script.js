@@ -1,15 +1,14 @@
 import './style.scss';
 import MP3Player from './MP3Player';
 
-// Audio Player
 document.addEventListener('DOMContentLoaded', () => {
-	const allAudioPlayer = document.querySelectorAll('.wp-block-bpmp-mp3-player');
-	allAudioPlayer.forEach(audioPlayer => {
-		const attributes = JSON.parse(audioPlayer.dataset.attributes);
+	const mp3PlayerEls = document.querySelectorAll('.wp-block-bpmp-mp3-player');
+	mp3PlayerEls.forEach(mp3PlayerEl => {
+		const attributes = JSON.parse(mp3PlayerEl.dataset.attributes);
 		const { audioProperties } = attributes;
 
-		MP3Player(audioPlayer, audioProperties);
+		MP3Player(mp3PlayerEl, audioProperties);
 
-		audioPlayer?.removeAttribute('data-attributes');
+		mp3PlayerEl?.removeAttribute('data-attributes');
 	});
 });

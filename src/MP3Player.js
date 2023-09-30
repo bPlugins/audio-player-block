@@ -16,8 +16,6 @@ const MP3Player = (selector, songs = []) => {
 	const next = element.querySelector('#next');
 	let songIndex = 0;
 
-	// Load song initially
-
 	// Load the given song
 	const loadSong = (song) => {
 		cover.src = song.cover?.url || defaultCoverImg;
@@ -119,18 +117,24 @@ const MP3Player = (selector, songs = []) => {
 
 	// Go to next song
 	function gotoNextSong(playImmediately) {
-		if (songIndex === songs.length - 1) {
-			songIndex = 0;
-		} else {
-			songIndex = songIndex + 1;
+		const goToNext = () => {
+			if (songIndex === songs.length - 1) {
+				songIndex = 0;
+			} else {
+				songIndex = songIndex + 1;
+			}
+
+			const isDiscPlayingNow = !disc.paused;
+			loadSong(songs[songIndex]);
+			resetProgress();
+			if (isDiscPlayingNow || playImmediately) {
+				playPauseMedia();
+			}
 		}
 
-		const isDiscPlayingNow = !disc.paused;
-		loadSong(songs[songIndex]);
-		resetProgress();
-		if (isDiscPlayingNow || playImmediately) {
-			playPauseMedia();
-		}
+		if (songIndex < songs.length - 1) {
+			goToNext()
+		} // Stop at end of album
 	}
 
 	// Change song progress when clicked on progress bar
