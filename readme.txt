@@ -2,8 +2,8 @@
 Contributors: abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, audio player block, mp3 player, Gutenberg block
-Requires at least: 5.9+
-Tested up to: 6.3.1
+Requires at least: 6.2+
+Tested up to: 6.4.2
 Stable tag: 1.1.0
 Requires PHP: 7.1
 License: GPLv3 or later
@@ -33,7 +33,7 @@ A block for embedding a beautiful audio player on the WordPress website. It supp
 
 
 = Feedback =
-- Liked this plugin? Hate it? Want a new feature? [Send me some feedback](mailto:support@bplugins.com 'Send feedback')
+- Did you like this plugin? Dislike it? Have a feature request? [Please share your feedback with us](mailto:support@bplugins.com 'Send feedback')
 
 
 = ⭐ Check out the Parent Plugin of this plugin- =

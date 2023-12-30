@@ -1,7 +1,7 @@
 import { __ } from '@wordpress/i18n';
 import { InspectorControls, BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
 import { PanelBody, PanelRow, TextControl, __experimentalUnitControl as UnitControl, Button, Dashicon } from '@wordpress/components';
-import produce from 'immer';
+import { produce } from 'immer';
 
 // Components
 import { Label, InlineDetailMediaUpload, HelpPanel } from '../../Components';
