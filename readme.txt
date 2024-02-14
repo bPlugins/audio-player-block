@@ -3,7 +3,7 @@ Contributors: abuhayat, charlescormier
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, audio player block, mp3 player, Gutenberg block
 Requires at least: 6.2+
-Tested up to: 6.4.2
+Tested up to: 6.4.3
 Stable tag: 1.1.0
 Requires PHP: 7.1
 License: GPLv3 or later
