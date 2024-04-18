@@ -3,8 +3,8 @@
  * Plugin Name: Audio Player Block
  * Description: Listen Music on the Web.
  * Version: 1.1.0
- * Author: bPlugins LLC
- * Author URI: http://bplugins.com
+ * Author: bPlugins
+ * Author URI: https://bplugins.com
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain: mp3player-block
