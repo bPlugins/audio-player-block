@@ -10,7 +10,6 @@
  * Text Domain: mp3player-block
  */
 
-
 // ABS PATH
 if ( !defined( 'ABSPATH' ) ) { exit; }
 
@@ -18,4 +17,15 @@ define( 'BPMP_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERV
 define( 'BPMP_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'BPMP_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
-require_once BPMP_DIR_PATH . 'inc/block.php';
+if( !class_exists( 'BPMPPlugin' ) ){
+	class BPMPPlugin{
+		function __construct(){
+			add_action( 'init', [$this, 'onInit'] );
+		}
+
+		function onInit() {
+			register_block_type( __DIR__ . '/build' );
+		}
+	}
+	new BPMPPlugin;
+}

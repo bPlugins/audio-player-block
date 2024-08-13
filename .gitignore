@@ -1,5 +1,1 @@
-# Ignore everything
-bundled
-dist/*
-!dist/*.php
 node_modules

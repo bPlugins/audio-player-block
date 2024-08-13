@@ -1,12 +1,12 @@
-const Style = ({ attributes, clientId }) => {
+const Style = ({ attributes, id }) => {
 	const { width, alignment } = attributes;
 
 	return <style dangerouslySetInnerHTML={{
 		__html: `
-		#bpMp3Player-${clientId}{
+		#${id}{
 			text-align: ${alignment};
 		}
-		#bpMp3Player-${clientId} .bpMp3Player{
+		#${id} .bpMp3Player{
 			width: ${width};
 		}
 		`.replace(/\s+/g, ' ')

@@ -1,5 +1,5 @@
 import './style.scss';
-import MP3Player from './MP3Player';
+import MP3Player from './Components/Common/MP3Player';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const mp3PlayerEls = document.querySelectorAll('.wp-block-bpmp-mp3-player');

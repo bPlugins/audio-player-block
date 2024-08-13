@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bpmp/mp3-player",
+  "title": "Audio Player",
+  "description": "Listen music on the web.",
+  "category": "widgets",
+  "keywords": [
+    "music player",
+    "audio player",
+    "mp3 player block"
+  ],
+  "textdomain": "mp3player-block",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "audioProperties": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Green Chair",
+          "artist": "Diego Nava",
+          "cover": {
+            "id": null,
+            "url": "",
+            "alt": "",
+            "title": ""
+          },
+          "audio": {
+            "id": null,
+            "url": "",
+            "title": ""
+          }
+        }
+      ]
+    },
+    "width": {
+      "type": "string",
+      "default": "290px"
+    },
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

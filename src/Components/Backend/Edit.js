@@ -1,26 +1,27 @@
 import { useEffect } from 'react';
 import { __ } from '@wordpress/i18n';
+import { useBlockProps } from '@wordpress/block-editor';
 
-import MP3Player from './MP3Player';
-import Settings from './Settings';
-import Style from './Style';
-import { nextIcon, playIcon, prevIcon } from './utils/icons';
+import Settings from './Settings/Settings';
+import Style from '../Common/Style';
+import MP3Player from '../Common/MP3Player';
+import { nextIcon, playIcon, prevIcon } from '../../utils/icons';
 
 const Edit = props => {
-	const { className, attributes, setAttributes, clientId } = props;
+	const { attributes, setAttributes, clientId } = props;
 	const { audioProperties } = attributes;
 
-	useEffect(() => { clientId && setAttributes({ cId: clientId.substring(0, 10) }); }, [clientId]); // Set & Update clientId to cId
+	const id = `bpMp3Player-${clientId}`;
 
 	useEffect(() => {
-		0 !== audioProperties?.length && MP3Player(`#bpMp3Player-${clientId}`, audioProperties);
+		0 !== audioProperties?.length && MP3Player(`#${id}`, audioProperties);
 	}, [audioProperties]);
 
 	return <>
 		<Settings attributes={attributes} setAttributes={setAttributes} />
 
-		{0 !== audioProperties?.length ? <div className={className} id={`bpMp3Player-${clientId}`}>
-			<Style attributes={attributes} clientId={clientId} />
+		{0 !== audioProperties?.length ? <div {...useBlockProps()} id={id}>
+			<Style attributes={attributes} id={id} />
 
 			<div className='bpMp3Player'>
 				<div className='coverBox'>

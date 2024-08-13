@@ -3,10 +3,9 @@ import { InspectorControls, BlockControls, AlignmentToolbar } from '@wordpress/b
 import { PanelBody, PanelRow, TextControl, __experimentalUnitControl as UnitControl, Button, Dashicon } from '@wordpress/components';
 import { produce } from 'immer';
 
-// Components
-import { Label, InlineDetailMediaUpload, HelpPanel } from '../../Components';
-import { gearIcon } from '../../Components/utils/icons';
-import { pxUnit, perUnit } from '../../Components/utils/options';
+import { Label, InlineDetailMediaUpload, HelpPanel } from '../../../../../Components';
+import { gearIcon } from '../../../../../Components/utils/icons';
+import { pxUnit, perUnit } from '../../../../../Components/utils/options';
 
 const Settings = ({ attributes, setAttributes }) => {
 	const { audioProperties, alignment, width } = attributes;
