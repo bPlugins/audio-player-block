@@ -5,7 +5,7 @@ extract( $attributes );
 
 $styles = "#$id { text-align: $alignment; } #$id .bpMp3Player { width: $width; }";
 ?>
-<div <?php echo get_block_wrapper_attributes( [ 'class' => "$basicClass" ] ); ?> id='<?php echo esc_attr( $id ); ?>' data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'>
+<div <?php echo get_block_wrapper_attributes(); ?> id='<?php echo esc_attr( $id ); ?>' data-attributes='<?php echo esc_attr( wp_json_encode( $attributes ) ); ?>'>
 	<style><?php echo esc_html( $styles ); ?></style>
 
 	<div class='bpMp3Player'>
